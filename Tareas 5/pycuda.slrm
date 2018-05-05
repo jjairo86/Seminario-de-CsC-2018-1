@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -n 1
+#SBATCH --partition=visualizacion
+#SBATCH --gres=gpu:gtx970
+#SBATCH --job-name=UpS
+#SBATCH --time=04:00:00
+
+module load intel/python3
+
+module load cuda/8.0
+
+python CESB-VoltearArreglo.py > salida3.txt 
